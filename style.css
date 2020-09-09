@@ -1,0 +1,104 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital@1&display=swap');
+
+body{
+    font-family: 'Philosopher', sans-serif;
+    /*background-color: #252B43;*/
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+}
+.head{
+    display: flex;
+    padding:  5rem;
+}
+.logo{
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    line-height: 2;
+    flex-direction: column;
+}
+h3{
+    font-size: 2rem;
+    animation: moveInLeft 2s ease-in-out;
+}
+
+span{
+    animation: moveInRight 3s ease-out;
+}
+
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 8rem;
+}
+
+.link{
+    color: white;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media screen and (max-width: 600px){
+    html{
+        font-size: 62.5%;
+    }
+.head{
+    padding: 4rem;
+}
+.about{
+    padding: 3rem;
+}
+}
